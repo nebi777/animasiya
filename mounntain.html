@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mountain</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" 
+    integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" 
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #262626;
+        }
+        .middle{
+            width: 700px;
+            height: 460px;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            background-color: #fff;
+            overflow: hidden;
+        }
+        .mont{
+            width: 100%;
+            display: flex;
+            z-index: 2;
+        }
+        .mountain1{
+            width: 0;
+            height: 0;
+            border-left: 200px solid transparent;
+            border-right: 200px solid transparent;
+            border-bottom: 200px solid #4381b6;
+        }
+        .m-3{
+            transform: translateX(-300px);
+        }
+        .mountain2{
+            border-left: 100px solid transparent;
+            border-right: 100px solid transparent;
+            border-bottom: 100px solid #4381b6;
+            transform: translate(-130px, -40px);
+        }
+        .sun{
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background-color: #f2c500;
+            transform: translate(370px, 110px);
+            animation: sun 20s;
+            }
+            @keyframes sun{
+                0%{
+                    opacity: 0;
+                }
+                10% {
+                    transform: translate(370px, 110px);
+                    background-color: #e79315;
+                    opacity: 1;
+                 
+                }
+                15%{
+                  
+                    background-color: #f2c500;
+                    
+                }
+                50%{
+                    transform: translate(370px, -270px);
+                }
+                95%{
+                    background-color: #f2c500;
+                    
+                    
+                }
+                90% {
+                    background-color: #e79315;
+                    transform: translate(370px, 110px);
+                    opacity: 1;
+                    
+                }
+                100%{
+                    opacity: 0;
+                }
+            }
+            i{
+                color: #dcdcdc;
+                z-index: 1;
+            }
+            .b5{
+                font-size: 80px;
+                transform: translate(235px, 130px);
+                animation: b5 18s;
+                animation-delay: 2s;
+            }
+            @keyframes b5{
+                0%{
+                    transform: translate(235px, 130px);
+                }
+                50%{
+                    transform: translate(-570px, 130px);
+                }
+            }
+            .b4{
+                font-size: 100px;
+                transform: translate(365px, 130px);
+                animation: b4 17s;
+                animation-delay: 3s;
+            }
+            @keyframes b4{
+                0%{
+                    transform: translate(365px, 130px);
+                }
+                30%{
+                    transform: translate(-278px, 130px);
+                }
+                60%{
+                    transform: translate(-465px, 130px);
+                }
+            }
+            .b3{
+                font-size: 100px;
+                transform: translate(495px, 130px);
+                animation: b3 16s;
+                animation-delay: 4s;
+            }
+            @keyframes b3{
+                0%{
+                    transform: translate(495px, 130px);
+                }
+                60%{
+                    transform: translate(-335px, 130px);
+                }
+            }
+            .b2{
+                font-size: 80px;
+                transform: translate(-206px, 80px);
+                animation: b2 15s;
+                animation-delay: 5s;
+            }
+            @keyframes b2{
+                0%{
+                    transform: translate(-206px, 80px);
+                }
+                50%{
+                    transform: translate(676px, 80px);
+                }
+            }
+            .b1{
+                font-size: 80px;
+                transform: translate(-126px, 80px);
+                animation: b1 13s;
+                animation-delay: 7s;
+            }
+            @keyframes b1{
+                0%{
+                    transform: translate(-126px, 80px);
+                }
+                60%{
+                    transform: translate(696px, 80px);
+                }
+            }
+    </style>
+</head>
+<body>
+    <div class="middle">
+        <div class="cloud">
+        <i class="fa-solid fa-cloud b1"></i>
+        <i class="fa-solid fa-cloud b2"></i>
+        <i class="fa-solid fa-cloud b3"></i>
+        <i class="fa-solid fa-cloud b4"></i>
+        <i class="fa-solid fa-cloud b5"></i>
+        </div> 
+        <div class="sun"></div> 
+        <div class="mont">
+            <div class="mountain1"></div>
+            <div class="mountain2"></div>
+            <div class="mountain1 m-3"></div>
+        </div>  
+    </div>
+</body>
+</html>

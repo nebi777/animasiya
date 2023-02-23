@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Line</title>
+</head>
+<style>
+    body{
+        margin: 0;
+        padding: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+    }
+    .main{
+        width: 800px;
+        height: 400px;
+        background-color: #3b9386;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .center{
+        width: 400px;
+        height: 15px;
+        border: 18px solid #e79315;
+        border-radius: 30px;
+        position: relative;
+    }
+    .own{
+        position: absolute;
+        background-color: #fff;
+        bottom: -1px;
+        right: -1px;
+        width: 402px;
+        height: 17px;
+        border-radius: 30px;
+        animation: own 4s linear infinite;
+    }
+    @keyframes own{
+        0% {
+            width: 0;
+       }
+    100%{
+        width: 402px
+       }
+   }
+       
+</style>
+<body>
+    <div class="main">
+        <div class="center">
+            <div class="own"></div>
+        </div>
+    </div>
+</body>
+</html>

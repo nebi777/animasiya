@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>home</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+        .middle{
+            width: 900px;
+            height: 500px;
+            background-color: #e74c3c;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            border: 1px solid black;
+            overflow: hidden;
+        }
+        .hov{
+            width: 650px;
+            height: 60px;
+            background-color: white;
+            display: flex;
+            justify-content: center;
+            border-radius: 30px;
+            transform: translateX(-560px);
+            transition: 1s;
+        }
+        .hov h1{
+            margin: 10px 0 0 0;
+        }
+        .hov:hover{
+            transform: translateX(-60px);
+            cursor: pointer;
+            border-radius: 0;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="middle">
+        <div class="home hov">
+            <h1>Home</h1>
+        </div>
+        <div class="tutorials hov">
+            <h1>Tutorials</h1>
+        </div>
+        <div class="about hov">
+            <h1>About</h1>
+        </div>
+    </div>
+</body>
+</html>

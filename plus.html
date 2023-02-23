@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>plus</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #030c2f;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .hov{
+            /* width: 500px;
+            height: 85px; */
+            width: 90px;
+            height: 90px;
+            border-radius: 45px;
+            background-color: #f66482;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            transition: 1s;
+            box-shadow: 0px -2px 8px 6px rgb(243 137 137 / 55%);
+        }
+        i{
+            font-size: 30px;
+            color: white;
+        }
+        .plus{
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background-color: #f6113e;
+            z-index: 1;
+            display: flex;
+            position: absolute;
+            right: 47.4%;
+            box-shadow: 2px 2px 13px 11px rgb(243 137 137 / 80%);
+        }
+        input{
+            display: none;
+        }
+        .hov i{
+            display: none; 
+        }
+        label::after{
+            content: "\2b";
+            font-family: Font Awesome free;
+            font-weight: 900;
+            font-size: 60px;
+            color: white;
+            position: absolute;
+            left: 48.7%;
+            top: 45.5%;
+            z-index: 2;
+            transition: 1s;
+        }
+        input[id=plus]:checked ~ label::after{
+            transform: rotate(45deg);
+        }
+        input[id=plus]:checked ~ .hov i{
+            display: block;
+        }
+        input[id=plus]:checked ~ .hov {
+            width: 500px;
+            height: 85px;
+        }
+        
+    </style>
+</head>
+<body>
+    <input type="checkbox" id="plus">
+        <label for="plus" class="plus1"></label>
+    <div class="hov">
+        <i class="fa-brands fa-telegram"></i>
+        <i class="fa-regular fa-user"></i>
+        <div class="plus"></div>
+        <i class="fa-regular fa-star"></i>
+        <i class="fa-regular fa-envelope"></i>
+    </div>
+</body>
+</html>

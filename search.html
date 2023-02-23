@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>search</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" 
+    integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" 
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    body{
+        overflow-x: hidden;
+    }
+    input{
+        display: none;
+    }
+    .bars::after{
+        content: '\f002';
+        font-family: Font Awesome 5 free;
+        font-weight: 900;
+        color: #fff;
+        position: absolute;
+        left: 61%;
+        top: 48%;
+        z-index: 9999;
+    }
+    .bars::before{
+        content: "\f0c9";
+        font-family: Font Awesome 5 free;
+        font-weight: 900;
+        color: #fff;
+        position: absolute;
+        right: 35%;
+        top: 48%;
+        z-index: 9999;
+    }
+    .arxafon{
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: rgb(64, 64, 255);
+    }
+    .main{
+        width: 300px;
+        display: flex;
+        justify-content: flex-end;
+    }
+    .box{
+        position: relative;
+        width: 70px;
+        height: 50px;
+        display: flex;
+        border: 1px solid white;
+        border-radius: 30px;
+        align-items: center;
+        color: #fff;
+    }
+    span{
+        margin-left: 40px;
+        display: none;
+    }
+    input[id=bars]:checked ~ .bars::before{
+        content: "\f00d";
+        font-family: Font Awesome 5 free;
+        font-weight: 900;
+    }
+    input[id=bars]:checked ~ .box{
+        width: 200px;
+    }
+    input[id=bars]:checked ~ .bars::after{
+        left: 46%;
+    }
+    input[id=bars]:checked ~ .box span{
+        display: block;
+    }
+         
+    </style>
+</head>
+<body>
+   <div class="arxafon">
+    <div class="main">
+        <input type="checkbox" id="bars">
+        <label for="bars" class="bars"></label>
+        <div class="box">
+            <span>Search...</span>
+        </div>
+    </div>
+   </div>
+</body>
+</html>

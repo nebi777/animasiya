@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>balls1</title>
+    <style>
+         body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 100vh;
+        }
+        .middle{
+            width: 700px;
+            height: 500px;
+            display: flex;
+            border: 1px solid black;
+            align-items: center;
+            justify-content: center;
+        }
+        .main{
+            width: 350px;
+            height: 80px;
+            border-radius: 40px;
+            background-color: #dac6d0;
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+            animation: main 4s;
+            opacity: 0;
+        }
+        @keyframes main {
+            0% {
+                opacity: 0;
+                width: 350px;
+                height: 60px;
+            }
+            50% {
+                opacity: 1;
+                width: 350px;
+                height: 80px;
+            }
+            100%{
+                opacity: 1;
+            }
+        }
+        .ball{
+            width: 25px;
+            height: 25px;
+            border-radius: 50%;
+            opacity: 0;
+        }
+        @keyframes ball1 {
+            0% {
+                opacity: 0;
+            }
+            50%{
+                opacity: 1;
+                transform: scale(2);
+            }
+            100%{
+                opacity: 1;
+                transform: scale(2);
+            }
+        }
+        .ball1{
+            background-color: #6a173e;
+            animation: ball1 3.5s;
+            animation-delay: .5s;
+        }
+        .ball2{
+            background-color: #fb6d4c;
+            animation: ball1 3s;
+            animation-delay: 1s;
+        }
+        .ball3{
+            background-color: #f9a227;
+            animation: ball1 2.5s;
+            animation-delay: 1.5s;
+        }
+        .ball4{
+            background-color: #eede2e;
+            animation: ball1 2s;
+            animation-delay: 2s;
+        }
+        .ball5{
+            background-color: #f3e2c1;
+            animation: ball1 1.5s;
+            animation-delay: 2.5s;
+             }
+    </style>
+</head>
+<body>
+    <div class="middle">
+    <div class="main">
+        <div class="ball1 ball"></div>
+        <div class="ball2 ball"></div>
+        <div class="ball3 ball"></div>
+        <div class="ball4 ball"></div>
+        <div class="ball5 ball"></div>
+    </div>
+    </div>
+</body>
+</html>
